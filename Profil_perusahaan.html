@@ -1,0 +1,438 @@
+<!doctype html>
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perumda Tirta Bumi Serasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      #slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-sm border"
+          >
+            <img
+              src="IMG/Logo_Tirta_Bumi_Serasi-removebg-preview.png"
+              alt="Logo"
+            />
+          </div>
+          <span class="font-bold text-blue-700 text-lg hidden sm:block"
+            >Tirta Bumi Serasi</span
+          >
+
+          <div class="hidden md:flex items-center gap-2 ml-4 border-l pl-4">
+            <a
+              href="#"
+              class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-pink-100 transition"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg"
+                class="w-4 h-4"
+              />
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tiktok.svg"
+                class="w-4 h-4"
+              />
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-green-100 transition"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg"
+                class="w-4 h-4"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <div
+            class="hidden lg:flex items-center gap-6 text-gray-600 font-medium text-sm"
+          >
+            <!-- Tentang Kami Dropdown -->
+            <div class="relative group">
+              <button class="hover:text-blue-600 flex items-center gap-1">
+                Tentang Kami ▾
+              </button>
+
+              <div
+                class="absolute left-0 top-full mt-2 w-56 bg-white rounded-xl shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              >
+                <a
+                  href="sejarah.html"
+                  class="block px-4 py-2 hover:bg-gray-100 rounded"
+                  >Sejarah</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded"
+                  >Visi & Misi</a
+                >
+                <a
+                  href="profil_perusahaan.html"
+                  class="block px-4 py-2 hover:bg-gray-100 rounded"
+                  >Struktur Organisasi</a
+                >
+                <a
+                  href="wilayah_layanan.html"
+                  class="block px-4 py-2 hover:bg-gray-100 rounded"
+                  >Wilayah Layanan</a
+                >
+              </div>
+            </div>
+
+            <!-- Karir Dropdown -->
+            <div class="relative group">
+              <button class="hover:text-blue-600 flex items-center gap-1">
+                Karir ▾
+              </button>
+
+              <div
+                class="absolute left-0 top-full mt-2 w-56 bg-white rounded-xl shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded"
+                  >Lowongan</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded"
+                  >Cara Melamar</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded"
+                  >Benefit</a
+                >
+              </div>
+            </div>
+            <!-- Info Kepelangganan -->
+            <div class="relative group">
+              <button class="hover:text-blue-600 flex items-center gap-1">
+                Info Kepelangganan ▾
+              </button>
+
+              <div
+                class="absolute left-0 top-full mt-2 w-56 bg-white rounded-xl shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Cek Tagihan</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Pengaduan</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Status Gangguan</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Cara Pembayaran</a
+                >
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Syarat & Ketentuan</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition"
+          >
+            Masuk / Daftar
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <html lang="id">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profil Perusahaan</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+          }
+
+          .card:hover {
+            transform: translateY(-6px);
+            transition: 0.3s;
+          }
+
+          .card img {
+            transition: 0.3s;
+          }
+
+          .card:hover img {
+            transform: scale(1.03);
+          }
+        </style>
+      </head>
+      <body class="bg-slate-100">
+        <!-- HEADER -->
+        <section
+          class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-14 shadow-lg"
+        >
+          <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="uppercase tracking-[4px] text-sm text-blue-200 mb-2">
+              Tirta Bumi Serasi - Profil Perusahaan
+            </p>
+
+            <h1 class="text-5xl font-bold mb-3">Susunan Direksi</h1>
+
+            <p class="max-w-2xl mx-auto text-blue-100">
+              Jajaran Direksi perusahaan yang berkomitmen memberikan pelayanan terbaik, profesional, dan berintegritas.
+            </p>
+          </div>
+        </section>
+
+        <!-- CONTENT -->
+        <section class="max-w-7xl mx-auto px-6 py-16">
+          <!-- DIREKTUR UTAMA -->
+          <div class="flex justify-center mb-16">
+            <div
+              class="card bg-white rounded-3xl shadow-xl overflow-hidden w-[340px] text-center"
+            >
+              <div class="bg-slate-50 p-6">
+                <img src="C:\Users\ngrot\Downloads\Gemini_Generated_Image_jn7nxujn7nxujn7n.png"w-64 mx-auto" />
+              </div>
+
+              <div class="bg-blue-900 text-white p-6">
+                <p class="text-sm tracking-[3px] text-blue-200 mb-2">
+                  DIREKTUR UTAMA
+                </p>
+
+                <h2 class="text-2xl font-bold">Nama Lengkap</h2>
+
+                <p class="text-sm mt-2 text-blue-100">
+                  Pemimpin utama perusahaan
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- DIREKTUR LAIN -->
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- CARD -->
+            <div
+              class="card bg-white rounded-3xl shadow-lg overflow-hidden text-center"
+            >
+              <div class="bg-slate-50 p-6">
+                <img src="img/pelayanan.png" class="w-56 mx-auto" />
+              </div>
+
+              <div class="p-6">
+                <p class="text-sm text-blue-700 font-semibold tracking-[2px]">
+                  DIREKTUR PELAYANAN
+                </p>
+
+                <h3 class="text-xl font-bold mt-2">Nama Lengkap</h3>
+
+                <p class="text-gray-500 mt-2 text-sm">
+                  Bertanggung jawab pada layanan pelanggan.
+                </p>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="card bg-white rounded-3xl shadow-lg overflow-hidden text-center"
+            >
+              <div class="bg-slate-50 p-6">
+                <img src="img/keuangan.png" class="w-56 mx-auto" />
+              </div>
+
+              <div class="p-6">
+                <p class="text-sm text-blue-700 font-semibold tracking-[2px]">
+                  DIREKTUR KEUANGAN
+                </p>
+
+                <h3 class="text-xl font-bold mt-2">Nama Lengkap</h3>
+
+                <p class="text-gray-500 mt-2 text-sm">
+                  Mengelola keuangan dan strategi investasi.
+                </p>
+              </div>
+            </div>
+
+            <!-- CARD -->
+            <div
+              class="card bg-white rounded-3xl shadow-lg overflow-hidden text-center"
+            >
+              <div class="bg-slate-50 p-6">
+                <img src="img/operasi.png" class="w-56 mx-auto" />
+              </div>
+
+              <div class="p-6">
+                <p class="text-sm text-blue-700 font-semibold tracking-[2px]">
+                  DIREKTUR OPERASI
+                </p>
+
+                <h3 class="text-xl font-bold mt-2">Nama Lengkap</h3>
+
+                <p class="text-gray-500 mt-2 text-sm">
+                  Mengatur operasional perusahaan harian.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </body>
+    </html>
+  </body>
+</html>
+
+
+    <footer class="bg-blue-950 text-white pt-16 pb-8">
+      <div
+        class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"
+      >
+        <div class="space-y-6">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center p-2"
+            >
+              <img
+                src="IMG/Logo_Tirta_Bumi_Serasi-removebg-preview.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <span class="font-bold text-lg leading-tight"
+              >Perumda Air Minum<br />Tirta Bumi Serasi</span
+            >
+          </div>
+          <p class="text-blue-200 text-sm leading-relaxed">
+            Menyediakan layanan air bersih yang sehat, merata, dan berkualitas
+            untuk masyarakat Kabupaten Semarang.
+          </p>
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg"
+                class="w-5 h-5 invert"
+              />
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-600 transition"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg"
+                class="w-5 h-5 invert"
+              />
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-600 transition"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg"
+                class="w-5 h-5 invert"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-lg mb-6 border-b border-white/10 pb-2">
+            Layanan
+          </h4>
+          <ul class="space-y-4 text-blue-200 text-sm">
+            <li>
+              <a href="#" class="hover:text-white transition"
+                >Info Tagihan Pelanggan</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition"
+                >Pendaftaran Sambung Baru</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition"
+                >Pengaduan Layanan</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">E-Procurement</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-lg mb-6 border-b border-white/10 pb-2">
+            Wilayah Pelayanan
+          </h4>
+          <ul class="space-y-4 text-blue-200 text-sm">
+            <li>
+              <span class="text-white font-semibold">Cabang Ungaran:</span> Jl.
+              Gatot Subroto No. 7
+            </li>
+            <li>
+              <span class="text-white font-semibold">Unit Ambarawa:</span> Jl.
+              Pemuda No. 12
+            </li>
+            <li>
+              <span class="text-white font-semibold">Unit Salatiga:</span>
+              Tengaran
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-lg mb-6 border-b border-white/10 pb-2">
+            Kontak Kami
+          </h4>
+          <div class="space-y-4 text-sm">
+            <div class="flex items-start gap-3">
+              <span class="text-xl">📞</span>
+              <p class="text-blue-200">(024) 6921102 / 6921103</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-xl">✉️</span>
+              <p class="text-blue-200">pdam@semarangkab.go.id</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-xl">📍</span>
+              <p class="text-blue-200">
+                Jl. Gatot Subroto No.7, Ungaran, Kab. Semarang
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/5 text-center text-blue-400 text-xs"
+      >
+        <p>
+          © 2026 Perumda Air Minum Tirta Bumi Serasi Kabupaten Semarang. All
+          Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
