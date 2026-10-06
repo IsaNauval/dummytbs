@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Perumda Tirta Bumi Serasi</title>
+
+    <!-- Ikon untuk sosial media atau mata password -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      /* SEMUA CSS MASUK KE SINI */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f4f8; /* Warna latar belakang halaman */
+      }
+
+      .main-container {
+        width: 900px;
+        height: 550px;
+        display: flex;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      /* Bagian Kiri (Sesuai gambar ac4782e121774b5ba303ab987fc4cd99.jpg) */
+      .left-side {
+        flex: 1.2;
+        background-color: #14056d; /* Hijau tua dasar */
+        background-image: url("img/BG1.png"); /* Contoh gambar alam/air */
+        background-size: cover;
+        background-position: left;
+        padding: 60px;
+        color: white;
+        position: relative;
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      /* Bagian Kanan (Form) */
+      .right-side {
+        flex: 1;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background: white;
+      }
+
+      /* Trik Lengkungan Putih agar mirip gambar referensi */
+      .right-side::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -80px;
+        width: 160px;
+        height: 100%;
+        background: white;
+        border-radius: 50% 0 0 50%;
+      }
+
+      .content-wrapper {
+        position: relative; /* Supaya di atas lengkungan putih */
+        z-index: 2;
+      }
+
+      .top-link {
+        text-align: right;
+        font-size: 0.85rem;
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .subtitle {
+        color: #777;
+        margin-bottom: 30px;
+        font-size: 0.9rem;
+      }
+
+      .input-box {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .input-box label {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #555;
+      }
+
+      .input-box input {
+        width: 100%;
+        border: none;
+        padding: 10px 0;
+        outline: none;
+        background: transparent;
+      }
+
+      .login-btn {
+        background: linear-gradient(
+          45deg,
+          #4facfe 0%,
+          #00f2fe 100%
+        ); /* Biru Air */
+        color: white;
+        border: none;
+        padding: 12px 35px;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
+      }
+
+      .social-text {
+        margin-top: 40px;
+        font-size: 0.8rem;
+        color: #888;
+      }
+
+      .icons {
+        margin-top: 10px;
+        display: flex;
+        gap: 15px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Area Visual -->
+      <div class="left-side">
+        <div class="logo-area">
+          <img
+            src="img/Logo_Tirta_Bumi_Serasi-removebg-preview.png"
+            alt="Logo Tirta Bumi Serasi"
+            width="42"
+            height="42"
+          />
+          <!-- Ikon air sederhana -->
+          <span>Tirta Bumi Serasi</span>
+        </div>
+      </div>
+
+      <!-- Area Form -->
+      <div class="right-side">
+        <div class="content-wrapper">
+          <div class="top-link">
+            <div class="top-link">
+              <!-- Menggunakan tag <a> agar bisa diklik -->
+              Belum punya akun? |
+              <a href="loginpage.html" class="nav-link">Sign Up</a>
+            </div>
+          </div>
+
+          <h2>Selamat Datang</h2>
+          <p class="subtitle">Sistem Informasi Pelayanan Pelanggan</p>
+
+          <form>
+            <div class="input-box">
+              <label>NOMOR PELANGGAN / EMAIL</label>
+              <input type="text" placeholder="Masukkan ID Anda" />
+            </div>
+            <div class="input-box">
+              <label>KATA SANDI</label>
+              <input type="password" placeholder="Masukkan kata sandi" />
+            </div>
+
+            <button type="submit" onclick="login()" class="login-btn">
+              MASUK
+            </button>
+            <script>
+              function login() {
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+
+                fetch("http://localhost:3000/login", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    email: email,
+                    password: password,
+                  }),
+                })
+                  .then((res) => res.text())
+                  .then((data) => {
+                    alert(data);
+                  });
+              }
+            </script>
+          </form>
+
+          <div class="social-text">Masuk dengan:</div>
+          <div class="icons">
+            <i class="fab fa-google"></i>
+            <i class="fab fa-facebook"></i>
+
+            <!-- Tombol Kembali -->
+            <div class="back-button-area">
+              <a href="home.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Kembali
+              </a>
+              <style>
+                /* Taruh di dalam sini agar CSS-nya aktif */
+                .back-button-area {
+                  margin-bottom: 20px;
+                }
+
+                .back-btn {
+                  text-decoration: none;
+                  color: #666;
+                  font-size: 0.85rem;
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  transition: 0.3s;
+                }
+
+                .back-btn:hover {
+                  color: #4caf50;
+                  transform: translateX(-3px);
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
