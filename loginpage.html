@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar - Perumda Tirta Bumi Serasi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Gradien Biru Air PDAM */
+        background:
+          radial-gradient(circle at 20% 30%, #e0f2fe 0%, transparent 40%),
+          radial-gradient(circle at 80% 20%, #bae6fd 0%, transparent 40%),
+          radial-gradient(circle at 50% 80%, #f0f9ff 0%, transparent 50%);
+        background-color: #f8fafc;
+      }
+
+      .container {
+        display: flex;
+        width: 1000px;
+        max-width: 95%;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(15px);
+        border-radius: 30px;
+        padding: 60px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+
+      /* Bagian Kiri */
+      .left-section {
+        flex: 1;
+        padding-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .headline {
+        font-size: 40px;
+        font-weight: 800;
+        color: #0369a1; /* Biru PDAM */
+        line-height: 1.2;
+        margin-bottom: 40px;
+      }
+
+      .feature {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .feature-icon {
+        background: #0ea5e9;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-shrink: 0;
+        font-size: 20px;
+      }
+
+      .feature h3 {
+        font-size: 18px;
+        color: #0c4a6e;
+        margin-bottom: 5px;
+      }
+
+      .feature p {
+        font-size: 14px;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .logo-area {
+        margin-top: 40px;
+        font-weight: 700;
+        font-size: 18px;
+        color: #0369a1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      /* Bagian Kanan (Form) */
+      .right-section {
+        flex: 0.8;
+      }
+
+      .card {
+        background: white;
+        padding: 40px;
+        border-radius: 24px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      h2 {
+        font-size: 22px;
+        color: #0f172a;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #64748b;
+      }
+
+      .subtitle a {
+        color: #0284c7;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      input {
+        width: 100%;
+        padding: 14px 16px;
+        margin-bottom: 15px;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        background-color: #f8fafc;
+        font-size: 14px;
+        outline: none;
+        transition: 0.2s;
+      }
+
+      input:focus {
+        border-color: #38bdf8;
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
+      }
+
+      .btn-signup {
+        width: 100%;
+        padding: 16px;
+        background-color: #0284c7;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-top: 10px;
+      }
+
+      .btn-signup:hover {
+        background-color: #0369a1;
+        transform: translateY(-1px);
+      }
+
+      .footer-text {
+        font-size: 11px;
+        color: #94a3b8;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 850px) {
+        .container {
+          flex-direction: column;
+          padding: 30px;
+        }
+        .left-section {
+          padding-right: 0;
+          margin-bottom: 40px;
+        }
+        .headline {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- SISI KIRI: INFO LAYANAN -->
+      <div class="left-section">
+        <h1 class="headline">
+          Solusi Digital Air Bersih<br />untuk Masyarakat Kabupaten Semarang
+        </h1>
+
+        <div class="feature">
+          <div class="feature-icon">💧</div>
+          <div class="text">
+            <h3>Cek Tagihan Mudah</h3>
+            <p>
+              Pantau penggunaan air dan cek tagihan bulanan Anda kapan saja
+              melalui dashboard pelanggan kami.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <div class="text">
+            <h3>Pengaduan Online</h3>
+            <p>
+              Sampaikan keluhan atau gangguan layanan langsung ke tim teknis
+              kami untuk penanganan cepat.
+            </p>
+          </div>
+        </div>
+
+        <div class="logo-area">
+          <img
+            src="img/Logo_Tirta_Bumi_Serasi-removebg-preview.png"
+            width="30"
+            alt="Logo"
+          />
+          <span>Perumda Tirta Bumi Serasi</span>
+        </div>
+      </div>
+
+      <!-- SISI KANAN: FORM -->
+      <div class="right-section">
+        <div class="card">
+          <h2>Buat Akun Baru</h2>
+          <p class="subtitle">
+            Sudah punya akun? <a href="login2.html">Masuk di sini</a>
+          </p>
+
+          <form action="#">
+            <input type="text" placeholder="Nama Lengkap" required />
+            <input
+              type="text"
+              placeholder="Nomor Pelanggan (ID Pelanggan)"
+              required
+            />
+            <input type="email" placeholder="Alamat E-mail" required />
+            <input type="password" placeholder="Kata Sandi Baru" required />
+
+            <button type="submit" class="btn-signup">Daftar Sekarang</button>
+          </form>
+
+          <p class="footer-text">
+            Dengan mendaftar, Anda menyetujui Ketentuan Layanan <br />
+            Perumda Tirta Bumi Serasi Kabupaten Semarang.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
